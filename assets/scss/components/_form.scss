@@ -1,0 +1,26 @@
+label { height:auto; }
+
+.form-group {
+    width:100%;
+    margin-bottom:16px;
+}
+
+.form-control {
+    box-sizing: border-box;
+    margin: 0; padding:8px;
+    width:100%; 
+    min-height:16px;
+    border-radius:10px;
+    border: 1px solid #7E868A;
+    transition:border .2s;
+    color: #7E868A;
+}
+
+.form-control:focus {
+    border: 1px solid #bdc0c0;
+    outline: none;
+}
+
+textarea.form-control {
+    min-height:200px;
+}

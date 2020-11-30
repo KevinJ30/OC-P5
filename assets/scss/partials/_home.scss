@@ -1,0 +1,29 @@
+.section__home {
+    height:calc(100% - 100px);
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-infomration__title {
+    text-align:center;
+    font-size:6.8em;
+}
+
+.app-information__baseline {
+    margin: 0;
+    padding-left: 49px;
+    text-align:left;
+    font-size:2.5em;
+    font-weight:200;
+    font-style: italic;
+}
+
+.app-information.hidden {
+    animation-name:fadeInRight;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+

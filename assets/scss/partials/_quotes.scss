@@ -1,0 +1,16 @@
+.quotes {
+    position:relative;
+}
+
+.quotes .slick-prev, .quotes .slick-next{
+    position: absolute;
+    top: 50%;
+    border:none;
+    outline: none;
+    background:transparent;
+
+    cursor: pointer;
+}
+
+.quotes .slick-prev { left: -42px;}
+.quotes .slick-next { right: -42px;}

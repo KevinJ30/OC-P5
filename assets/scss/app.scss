@@ -1,0 +1,23 @@
+@import '_general.scss';
+@import '_typo.scss';
+
+/** UTILS **/
+@import 'utils/spacer.scss';
+@import 'utils/text.scss';
+@import 'utils/animated.scss';
+@import 'utils/grid.scss';
+@import 'utils/icon.scss';
+
+
+/** COMPONENTS **/
+
+@import 'components/form.scss';
+@import 'components/button.scss';
+@import 'components/bloc.scss';
+@import 'components/nav.scss';
+
+/** PARTIALS **/
+
+@import 'partials/home.scss';
+@import 'partials/quotes.scss';
+

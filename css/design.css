@@ -1,0 +1,406 @@
+html, body {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: "Josefin sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../../img/back.jpg") no-repeat center;
+  background-size: cover;
+}
+
+main.page {
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family: "Rochester", sans-serif;
+  font-size: 6.8em;
+}
+
+h2 {
+  font-family: "Rochester", sans-serif;
+  font-size: 2.5em;
+}
+
+/** UTILS **/
+.mt-1 {
+  margin-top: 8px;
+}
+
+.mt-2 {
+  margin-top: 16px;
+}
+
+.mt-3 {
+  margin-top: 24px;
+}
+
+.mb-1 {
+  margin-bottom: 8px;
+}
+
+.mb-2 {
+  margin-bottom: 16px;
+}
+
+.mb-3 {
+  margin-bottom: 24px;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.quote {
+  display: block;
+  font-family: "rochester", sans-serif;
+  font-size: 2.5em;
+}
+
+.animated {
+  position: relative;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+}
+
+.animated.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+.animated.fadeOutRight {
+  animation-name: fadeOutRight;
+}
+
+.animated.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.animated.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+.container {
+  padding: 16px 64px;
+  margin: 0 auto;
+  width: 54%;
+}
+
+.page {
+  height: 100%;
+}
+
+/** SIMPLE Grid **/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+
+.col {
+  padding-right: 32px;
+  width: 100%;
+  flex-basis: 0;
+  flex-grow: 1;
+}
+
+.col:last-child {
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+.grid.grid-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.grid.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+}
+
+.icon-home {
+  background: url("../../../img/icon-home.svg") no-repeat center;
+}
+
+.icon-quotes {
+  background: url("../../../img/icon-quotes.svg") no-repeat center;
+}
+
+.icon-settings {
+  background: url("../../../img/icon-settings.svg") no-repeat center;
+}
+
+.icon-play {
+  background: url("../../../img/icon-play.svg") no-repeat center;
+}
+
+.icon-reset {
+  background: url("../../../img/icon-reset.svg") no-repeat center;
+}
+
+.icon-arrow-left {
+  background: url("../../../img/icon-arrow-left.svg") no-repeat center;
+}
+
+.icon-arrow-right {
+  background: url("../../../img/icon-arrow-left.svg") no-repeat center;
+  transform: rotate(180deg);
+}
+
+.icon-done {
+  background: url("../../../img/icon-done-white.svg") no-repeat center;
+}
+
+/** COMPONENTS **/
+label {
+  height: auto;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.form-control {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px;
+  width: 100%;
+  min-height: 16px;
+  border-radius: 10px;
+  border: 1px solid #7E868A;
+  transition: border 0.2s;
+  color: #7E868A;
+}
+
+.form-control:focus {
+  border: 1px solid #bdc0c0;
+  outline: none;
+}
+
+textarea.form-control {
+  min-height: 200px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 35px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+  color: #fff;
+  transition: background 0.3s;
+  border: none;
+}
+
+.btn.btn-center {
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn.btn-primary {
+  background-color: #3E98CC;
+}
+
+.btn.btn-primary:hover {
+  background-color: #328BBD;
+}
+
+.btn.btn-danger {
+  background-color: #C53E34;
+}
+
+.btn.btn-danger:hover {
+  background-color: #B53930;
+}
+
+.btn-rounded {
+  padding: 8px;
+  border-radius: 100%;
+}
+
+.bloc {
+  padding: 42px;
+  background: rgba(226, 233, 236, 0.58);
+  border: 1px solid #7E868A;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.bloc h2 {
+  margin-top: 0;
+}
+
+.app-navigation {
+  max-height: 100px;
+  text-align: center;
+}
+
+.navigation {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  margin-top: 32px;
+  background: #E2E9EC;
+  border: 2px solid #7E868A;
+  border-radius: 10px;
+  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.nav .nav-item .active.left, .nav .nav-item a.left:hover {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.nav .nav-item .active.right, .nav .nav-item a.right:hover {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.nav .nav-item .active, .nav .nav-item a:hover {
+  background-color: #7E868A;
+}
+
+.nav .nav-item a {
+  padding: 15px;
+  display: block;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+/** PARTIALS **/
+.section__home {
+  height: calc(100% - 100px);
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-infomration__title {
+  text-align: center;
+  font-size: 6.8em;
+}
+
+.app-information__baseline {
+  margin: 0;
+  padding-left: 49px;
+  text-align: left;
+  font-size: 2.5em;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.app-information.hidden {
+  animation-name: fadeInRight;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.quotes {
+  position: relative;
+}
+
+.quotes .slick-prev, .quotes .slick-next {
+  position: absolute;
+  top: 50%;
+  border: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.quotes .slick-prev {
+  left: -42px;
+}
+
+.quotes .slick-next {
+  right: -42px;
+}
+
+/*# sourceMappingURL=design.css.map */

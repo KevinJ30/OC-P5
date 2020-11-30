@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/design.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!--<link rel="stylesheet" href="css/app.css">-->
+    <title>Citations</title>
+</head>
+<body>
+    <main class="page">
+         <!-- NAVIGATION -->
+         <div  class="app-navigation">
+            <div class="navigation">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active left" href="#" id="section__home"><span class="icon icon-home"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="section__citation"><span class="icon icon-quotes"></span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link right" href="#" id="section__configuration"><span class="icon icon-settings"></span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- END -->
+
+        <section id="home" class="section section__home active">
+
+            <div class="section__home-content">
+                <!-- Information du site -->
+                <div class="app-information animated fadeInLeft">
+                    <h1 class="app-information__title">Generateur de citations</h1>
+                    <p class="app-information__baseline">Vous avez besoin d'une citation ou de plusieurs</p>
+                </div>
+            
+            </div>
+        </section>
+        <section id="citation" class="section section__citation hidden animated fadeInLeft">
+            <div class="container">
+                <div class="bloc bloc__step1">
+                    <h2 class="text-center">Étape 1</h2>
+                    <p class="text-center">Quand vous aurez cliquer sur le bouton la citation s'affichera en dessous de celui-ci et dans la console du navigateur.</p>
+                    <a href="#" id="citation-btn-generate" class="btn btn-center btn-primary"><span class="icon icon-play"></span></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="configuration" class="section section__configuration hidden animated fadeInLeft">
+            <div class="container">
+                <div class="bloc bloc__step2">
+                    <h2 class="text-center">Étape 2</h2>
+                    <p class="text-center">Configurer votre citation</p>
+
+                    <form id="form-configuration" action="#" method="POST">
+                        <div class="row">
+                            <div class="form-group col">
+                                <select name="quote-type" id="quote-type" class="form-control">
+                                    <option value="">Choisissez un type</option>
+                                    <option id="quote-type-default" value="money" selected>Argent</option>
+                                    <option value="sentimental">Sentimental</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group col">
+                                <input id="quote-number" type="number" name="quote_number" class="form-control" value="1">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-center btn-rounded btn-primary mb-2"><span class="icon icon-done"></span></button>
+                        <button id="form-configuration-reset" type="submit" class="btn btn-center btn-rounded btn-danger"><span class="icon icon-reset"></span></button>
+                    </form>
+
+                    <p>10 Citations générés</p>
+                    <div class="quotes">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        // Initialisation de slick
+        let $carroussel = $('.quotes')
+        
+        $carroussel.slick({
+            infinite: true,
+            prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"><span class="icon icon-arrow-left"></span></button>',
+            nextArrow: '<button type="button" class="slick-next" aria-label="Next"><span class="icon icon-arrow-right"></span></button>',
+        })
+    </script>
+
+    <script src="js/animated.js"></script>
+    <script src="js/tabs.js"></script>
+    <script type="module" src="js/step1.js"></script>
+    <script type="module" src="js/step2.js"></script>
+</body>
+</html>

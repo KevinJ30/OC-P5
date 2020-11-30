@@ -1,0 +1,44 @@
+.app-navigation {
+    max-height:100px;
+    text-align: center;
+}
+
+.navigation {
+    position: relative;
+    display:inline-block;
+    margin: 0;
+    margin-top: 32px;
+    background: #E2E9EC;
+    border: 2px solid #7E868A;
+    border-radius:10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.25);
+}
+
+.nav {
+    margin: 0; padding: 0;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+.nav .nav-item .active.left, .nav .nav-item a.left:hover {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.nav .nav-item .active.right, .nav .nav-item a.right:hover {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.nav .nav-item .active, .nav .nav-item a:hover {
+    background-color:#7E868A;
+}
+
+.nav .nav-item a {
+    padding:15px;
+    display:block;
+    background:transparent;
+    transition:background 0.3s;
+}

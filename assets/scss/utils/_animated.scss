@@ -1,0 +1,64 @@
+.animated {
+    position: relative;
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+
+.animated.fadeInRight{ animation-name:fadeInRight; }
+.animated.fadeOutRight { animation-name: fadeOutRight; }
+
+.animated.fadeInLeft{ animation-name:fadeInLeft; }
+.animated.fadeOutLeft { animation-name: fadeOutLeft; }
+
+.hidden {
+    display :none!important;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity:0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity:1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity:0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity:1;
+        transform: translateX(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+}

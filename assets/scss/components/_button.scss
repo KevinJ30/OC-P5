@@ -1,0 +1,35 @@
+.btn {
+    display:inline-block;
+    padding:8px 35px;
+    border-radius:10px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.15);
+    color:#fff;
+    transition: background .3s;
+    border:none;
+}
+
+.btn.btn-center {
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+.btn.btn-primary{
+    background-color:#3E98CC;
+}
+
+.btn.btn-primary:hover {
+    background-color:#328BBD;
+}
+
+.btn.btn-danger{
+    background-color:#C53E34;
+}
+
+.btn.btn-danger:hover {
+    background-color:#B53930;
+}
+
+.btn-rounded {
+    padding: 8px;
+    border-radius: 100%;
+}

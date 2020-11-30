@@ -77,7 +77,7 @@ import { Quotes } from './Quotes.js';
 
     let createBlocCitation = (text) => {
         // Ajoute un element a slick
-        $carroussel.slick('slickAdd', '<q class="quote text-center">' + text + '</q>')
+        $carroussel.slick('slickAdd', '<q class="quote text-center animated fadeInLeft">' + text + '</q>')
     }
 
     let handleReset = (event) => {

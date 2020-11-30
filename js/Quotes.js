@@ -1,21 +1,28 @@
 import { randomNumber } from "./utils.js";
+import { FragmentsQuotes } from './FragmentQuotes.js';
 
 export class Quotes {
+
 
     /**
      * Constructor
      * 
-     * @param {Object} fragmentsQuotes 
+     * @param {Object} FragmentsQuotes 
      **/
-    constructor(fragmentsQuotes, theme) {
-        if(typeof fragmentsQuotes === 'object') {
-            this.FragmentsQuotes = fragmentsQuotes;
-        }
-        else {
-            throw 'type of object passed to the argument'
+    constructor(theme) {
+        this.FragmentsQuotes = new FragmentsQuotes();
+        this.theme = theme;
+    }
+
+    /**
+     * @return { Quotes } quotes : Instance de la class quote
+     **/
+    static getInstance = () => {
+        if(this.instance === undefined) {
+            this.instance = new Quotes();
         }
 
-        this.theme = theme;
+        return this.instance;
     }
 
     /**

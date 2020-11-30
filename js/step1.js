@@ -7,17 +7,13 @@
 
 // Sécurisation du code
 import { Quotes } from './Quotes.js';
-import { fragmentsQuotes } from './FragmentQuotes.js';
-
 
 (function() {
     let btn_generate = document.getElementById('citation-btn-generate');
     let bloc_step = document.querySelector('.bloc__step1');
 
     let handleClick = (event) => {
-
-        let fragments = fragmentsQuotes.getFragment(fragmentsQuotes.getRandomTheme());
-            let citation1 = new Quotes(fragmentsQuotes);
+            let citation1 = Quotes.getInstance();
             let citation_text = citation1.generate(1)
             
             // Ajout de la citation en dessous du bouton play

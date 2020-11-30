@@ -1,7 +1,7 @@
 import { randomNumber } from './utils.js';
 import { quotes } from './quotes_data.js';
 
-class FragmentsQuotes {
+export class FragmentsQuotes {
 
     /**
      * Generate random theme
@@ -26,5 +26,3 @@ class FragmentsQuotes {
         return quotes[theme];
     }
 }
-
-export let fragmentsQuotes = new FragmentsQuotes();

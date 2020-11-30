@@ -1,5 +1,4 @@
 import { Quotes } from './Quotes.js';
-import { fragmentsQuotes } from './FragmentQuotes.js';
 
 (function() {
     let form_element = document.getElementById('form-configuration');
@@ -9,7 +8,7 @@ import { fragmentsQuotes } from './FragmentQuotes.js';
     let quoteContent_element = document.getElementById('quote-content');
     let drawQuoteNumber_element = document.getElementById('draw-quote-number');
 
-    let citation = new Quotes(fragmentsQuotes);
+    let citation = Quotes.getInstance();
 
     /**
      * Reset le contenu des citations
@@ -41,7 +40,7 @@ import { fragmentsQuotes } from './FragmentQuotes.js';
      **/
     let handleFormSubmit = (event) => {
         event.preventDefault();
-        
+
         let content = quoteContent_element;
         let quoteType =  inputQuoteType_element.value;
         let quoteNumber =  inputQuoteNumber_element.value;

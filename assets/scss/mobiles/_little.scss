@@ -1,0 +1,18 @@
+@media screen and (max-width: 400px) {
+    .app-information__title {
+        font-size:3.8em;
+        line-height:0.8em;
+    }
+
+    .app-information__baseline {
+        padding: 0;
+        margin-top:16px;
+        font-size:2em;
+    }
+
+    .container { width:90%; }
+
+    .quote { font-size:2em; }
+
+    .row { flex-direction: column; }
+}

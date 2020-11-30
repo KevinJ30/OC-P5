@@ -4,7 +4,7 @@ html, body {
   height: 100%;
   font-family: "Josefin sans", sans-serif;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 body {
@@ -16,7 +16,6 @@ body {
 
 main.page {
   height: 100vh;
-  overflow-y: scroll;
 }
 
 h1 {
@@ -57,11 +56,11 @@ h2 {
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
 }
 
 .quote {
@@ -137,8 +136,12 @@ h2 {
     transform: translateX(-20px);
   }
 }
+.section {
+  width: 100%;
+}
+
 .container {
-  padding: 16px 64px;
+  padding: 16px;
   margin: 0 auto;
   width: 54%;
 }
@@ -401,6 +404,32 @@ textarea.form-control {
 
 .quotes .slick-next {
   right: -42px;
+}
+
+/** Responsive **/
+@media screen and (max-width: 400px) {
+  .app-information__title {
+    font-size: 3.8em;
+    line-height: 0.8em;
+  }
+
+  .app-information__baseline {
+    padding: 0;
+    margin-top: 16px;
+    font-size: 2em;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .quote {
+    font-size: 2em;
+  }
+
+  .row {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=design.css.map */

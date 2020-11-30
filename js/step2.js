@@ -7,6 +7,7 @@ import { fragmentsQuotes } from './FragmentQuotes.js';
     let inputQuoteNumber_element = document.getElementById('quote-number');
     let inputQuoteType_element = document.getElementById('quote-type');
     let quoteContent_element = document.getElementById('quote-content');
+    let drawQuoteNumber_element = document.getElementById('draw-quote-number');
 
     let citation = new Quotes(fragmentsQuotes);
 
@@ -19,12 +20,28 @@ import { fragmentsQuotes } from './FragmentQuotes.js';
     }
 
     /**
+     * Mise à jour de l'élément nombre de citation
+     * 
+     * @param {number} number : Nombre de citation
+     * @return { void }
+     **/
+    let updateNumberCitation = (number) => {
+        if(number > 1) {
+            drawQuoteNumber_element.innerHTML = number + ' citations générées';
+        }
+        else {
+            drawQuoteNumber_element.innerHTML = number + ' citation générée';
+        }
+    }
+
+    /**
      * Valide les informations du formulaire
      * 
      * @param {Event} event
      **/
     let handleFormSubmit = (event) => {
         event.preventDefault();
+        
         let content = quoteContent_element;
         let quoteType =  inputQuoteType_element.value;
         let quoteNumber =  inputQuoteNumber_element.value;
@@ -37,14 +54,14 @@ import { fragmentsQuotes } from './FragmentQuotes.js';
             if(quoteType !== "placeholder") {
                 // on vide les ancienne informations
                 clearContent();
-    
-                for(let i = 0; i < quoteNumber; i++) {
+                let i = 0;
+                for(i = 0; i < quoteNumber; i++) {
                     let citations = citation.generate(1)
                     createBlocCitation(citations);
                 }
-    
-                //let container_quotes = document.querySelector('.quotes');
-                //container_quotes.classList.remove('hidden');
+                
+                // Affichage du nombre de quote
+                updateNumberCitation(i);
             }
             else {
                 alert("Vous devez séléctionner une catégorie !");

@@ -16,6 +16,7 @@ import { Quotes } from './Quotes.js';
      **/
     let clearContent = () => {
         document.querySelector('.slick-track').innerHTML = "";
+        updateNumberCitation(0);
     }
 
     /**

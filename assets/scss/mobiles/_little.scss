@@ -1,4 +1,4 @@
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 750px) {
     .app-information__title {
         font-size:3.8em;
         line-height:0.8em;
@@ -10,9 +10,12 @@
         font-size:2em;
     }
 
-    .container { width:90%; }
+    .container { width:90% !important; }
 
     .quote { font-size:2em; }
 
     .row { flex-direction: column; }
+    .bloc {
+        padding:24px;
+    }
 }

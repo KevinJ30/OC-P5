@@ -9,7 +9,7 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  background: url("../../img/back.jpg") no-repeat center;
+  background: url("../img/back.jpg") no-repeat center;
   background-size: cover;
 }
 
@@ -198,36 +198,36 @@ h2 {
 }
 
 .icon-home {
-  background: url("../../../img/icon-home.svg") no-repeat center;
+  background: url("../img/icon-home.svg") no-repeat center;
 }
 
 .icon-quotes {
-  background: url("../../../img/icon-quotes.svg") no-repeat center;
+  background: url("../img/icon-quotes.svg") no-repeat center;
 }
 
 .icon-settings {
-  background: url("../../../img/icon-settings.svg") no-repeat center;
+  background: url("../img/icon-settings.svg") no-repeat center;
 }
 
 .icon-play {
-  background: url("../../../img/icon-play.svg") no-repeat center;
+  background: url("../img/icon-play.svg") no-repeat center;
 }
 
 .icon-reset {
-  background: url("../../../img/icon-reset.svg") no-repeat center;
+  background: url("../img/icon-reset.svg") no-repeat center;
 }
 
 .icon-arrow-left {
-  background: url("../../../img/icon-arrow-left.svg") no-repeat center;
+  background: url("../img/icon-arrow-left.svg") no-repeat center;
 }
 
 .icon-arrow-right {
-  background: url("../../../img/icon-arrow-left.svg") no-repeat center;
+  background: url("../img/icon-arrow-left.svg") no-repeat center;
   transform: rotate(180deg);
 }
 
 .icon-done {
-  background: url("../../../img/icon-done-white.svg") no-repeat center;
+  background: url("../img/icon-done-white.svg") no-repeat center;
 }
 
 /** COMPONENTS **/

@@ -2,7 +2,7 @@ import { randomNumber } from "./utils.js";
 import { FragmentsQuotes } from './FragmentQuotes.js';
 
 export class Quotes {
-
+    static instance = null;
 
     /**
      * Constructor
@@ -18,10 +18,10 @@ export class Quotes {
      * @return { Quotes } quotes : Instance de la class quote
      **/
     static getInstance = () => {
-        if(this.instance === undefined) {
+        if(!this.instance) {
             this.instance = new Quotes();
         }
-
+        
         return this.instance;
     }
 

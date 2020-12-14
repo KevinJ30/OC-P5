@@ -1,3 +1,8 @@
+/**
+ * Joudrier Kevin
+ * Generator step 2
+ **/
+
 import { Quotes } from './Quotes.js';
 
 (function() {
@@ -11,7 +16,7 @@ import { Quotes } from './Quotes.js';
     let citation = Quotes.getInstance();
 
     /**
-     * Reset le contenu des citations
+     * Clear content
      * @return { void }
      **/
     let clearContent = () => {
@@ -21,8 +26,9 @@ import { Quotes } from './Quotes.js';
 
     /**
      * Mise à jour de l'élément nombre de citation
+     * Update of the counter quotes
      * 
-     * @param {number} number : Nombre de citation
+     * @param {number} number : Number of quotes
      * @return { void }
      **/
     let updateNumberCitation = (number) => {
@@ -36,6 +42,7 @@ import { Quotes } from './Quotes.js';
 
     /**
      * Valide les informations du formulaire
+     * Validate the inforamtions of the form
      * 
      * @param {Event} event
      **/
@@ -48,11 +55,10 @@ import { Quotes } from './Quotes.js';
 
         citation.setTheme(quoteType);
 
-        // Si le nombre est supperieure a 0 ou si le nombre est inférieure 5
         if(quoteNumber > 0 && quoteNumber <= 5) {
             
             if(quoteType !== "placeholder") {
-                // on vide les ancienne informations
+                // clear the last content
                 clearContent();
                 let i = 0;
                 for(i = 0; i < quoteNumber; i++) {
@@ -60,7 +66,7 @@ import { Quotes } from './Quotes.js';
                     createBlocCitation(citations);
                 }
                 
-                // Affichage du nombre de quote
+                // draw number of quote
                 updateNumberCitation(i);
             }
             else {
@@ -76,20 +82,19 @@ import { Quotes } from './Quotes.js';
     }
 
     let createBlocCitation = (text) => {
-        // Ajoute un element a slick
+        // Add an element a slick librarie
         $carroussel.slick('slickAdd', '<q class="quote text-center animated fadeInLeft">' + text + '</q>')
     }
 
     let handleReset = (event) => {
         event.preventDefault();
-        /**orm_element.querySelector('#form-configuration-select-default').selected = true**/
         inputQuoteType_element.querySelector('#quote-type-default').selected = true;
         inputQuoteNumber_element.value = 1;
         clearContent();
     }
 
     /**
-     * Events
+     * Add all events
      **/
     form_element.addEventListener('submit', (event) => {handleFormSubmit(event)})
     btn_reset_element.addEventListener('click', (event) => {handleReset(event)})

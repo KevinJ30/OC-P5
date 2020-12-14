@@ -1,4 +1,9 @@
 /**
+ * Joudrier Kevin
+ * Contains all utility functions  
+ */
+
+/**
  * 
  * @param { number } min : valeur minimum 
  * @param {*} max : valeur maximum

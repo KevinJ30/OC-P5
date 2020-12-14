@@ -1,10 +1,16 @@
+/**
+* Joudrier Kevin
+* Gets all parts for the quote
+ **/
+
 import { randomNumber } from './utils.js';
 import { quotes } from './quotes_data.js';
+
 
 export class FragmentsQuotes {
 
     /**
-     * Generate random theme
+     * Generate a random theme
      * 
      * @return {string} theme name
      **/
@@ -14,7 +20,7 @@ export class FragmentsQuotes {
     }
 
     /**
-     * Return the fragment of the selected theme
+     * Return all parts of the selected theme
      * 
      * @param {string} theme 
      **/

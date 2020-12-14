@@ -1,5 +1,6 @@
 /**
- * Contient tous les tableaux de citations par thèmes
+ * Joudrier Kevin
+ * Contains all the parts for the quotation arrange by themes
  **/
 
 export let quotes = {

@@ -1,3 +1,7 @@
+/**
+ * Joudrier Kevin
+ * Manage tabs button
+ **/
 (function() {    
     let sectionActivated = document.querySelector('.section.active');
     let navigationButtons = document.querySelectorAll('.navigation .nav-link');
@@ -5,13 +9,14 @@
 
     /**
      * On enregistre l'événement sur les boutons de la navigation
+     * Register event button navigation
      **/
     for(let i = 0; i < navigationButtons.length; i++) {
         navigationButtons[i].addEventListener('click', (event) => { handleClick(event) })
     }
 
     /**
-     * Click sur le bouton de la navigation
+     * Click on the button navigation
      * 
      * @param {Event} event 
      **/
@@ -19,12 +24,10 @@
         event.preventDefault();
         let targetElement = getTargetElement(event.target);
 
-        // Change le state du bouton
+        // Change state on the button
         navigationChangeFocus(targetElement);
-
-        // On recherche la section qui correspond au bouton cliqué
         
-        // On supprime la class ative sur la section activé
+        // Delete class active on the active section
         sectionActivated.classList.add('hidden');
         sectionActivated.classList.remove('active');
 
@@ -35,10 +38,10 @@
     }
 
     let navigationChangeFocus = (btn) => {
-        // Suppression de la class active sur le bouton actuel
+        // Delete class active on the current button
         navigationActivated.classList.remove('active');
 
-        // Ajoute la class active au bouton
+        // Add the active class to the button
         navigationActivated = btn;
         btn.classList.add('active');
     }

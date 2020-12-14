@@ -1,3 +1,8 @@
+/**
+ * Jodurier Kevin
+ * Build all quotes with the given parameters
+ **/
+
 import { randomNumber } from "./utils.js";
 import { FragmentsQuotes } from './FragmentQuotes.js';
 
@@ -7,7 +12,7 @@ export class Quotes {
     /**
      * Constructor
      * 
-     * @param {Object} FragmentsQuotes 
+     * @param {Object} FragmentsQuotes
      **/
     constructor(theme) {
         this.FragmentsQuotes = new FragmentsQuotes();
@@ -15,6 +20,8 @@ export class Quotes {
     }
 
     /**
+     * Declare singleton of the class
+     * 
      * @return { Quotes } quotes : Instance de la class quote
      **/
     static getInstance = () => {
@@ -26,7 +33,7 @@ export class Quotes {
     }
 
     /**
-     * Modifier le thème séléctionné
+     * Edit selected theme
      * 
      * @param {theme} theme
      * @return {void}
@@ -35,22 +42,26 @@ export class Quotes {
         this.theme = theme;
     }
 
+    /**
+     * Load quote parts for the selected theme
+     * 
+     * @param {string} theme 
+     **/
     loadFragment(theme) {
         return this.fragmentsQuotes = this.FragmentsQuotes.getFragment(theme);
     }
 
     /**
-     * Construit une citation
+     * Build quote
      * 
-     * @param {string} theme : theme séléctionner contruire la citation
-     * @return {string} : citation
+     * @return {string} : quote
      **/
     buildCitation() {
         return this.fragmentsQuotes.startQuote[randomNumber(0, this.fragmentsQuotes.startQuote.length)] + ' ' + this.fragmentsQuotes.middleQuote[randomNumber(0, this.fragmentsQuotes.middleQuote.length)] + ' ' + this.fragmentsQuotes.endQuote[randomNumber(0, this.fragmentsQuotes.endQuote.length)];
     }
 
     /**
-     * Génére plusieur citation
+     * Return all quotes generated for the number indicate
      * @param {number} number 
      **/
     generate(number) {

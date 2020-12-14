@@ -1,11 +1,7 @@
 /**
  * Joudrier Kevin
- * le : 04/11/2020
- * 
- * Générateur de citation partie 1
+ * Generator step 1
  **/
-
-// Sécurisation du code
 import { Quotes } from './Quotes.js';
 
 (function() {
@@ -16,7 +12,7 @@ import { Quotes } from './Quotes.js';
             let citation1 = Quotes.getInstance();
             let citation_text = citation1.generate(1)
             
-            // Ajout de la citation en dessous du bouton play
+            // Add a quote under the play button
             let citation_element = createBlocCitation(citation_text)
             
             let lastQuote = bloc_step.querySelector('.quote');
@@ -26,12 +22,12 @@ import { Quotes } from './Quotes.js';
 
             bloc_step.appendChild(citation_element);
 
-            // Ajout de la ciation dans la console
+            // Add a quote in the console
             console.log(citation1.generate(1))
     }
 
     let createBlocCitation = (text) => {
-        // Ajout de la citation en dessous du bouton play
+        // Add a quote under the play button
         let quote = document.createElement('q');
         let quote_text_element = document.createTextNode(text)
 
